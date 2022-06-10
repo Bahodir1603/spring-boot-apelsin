@@ -14,13 +14,13 @@ public class CategoryService {
     @Autowired
     CategoryRepository categoryRepository;
 
-    public void getAll(Model model) {
+    public void getAll(Model model){
         List<Category> categoryList = categoryRepository.findAll();
-        model.addAttribute("list", categoryList);
+        model.addAttribute("list",categoryList);
     }
 
-    public void add(Model model, Category category) {
+    public void add(Model model,Category category){
         categoryRepository.save(category);
-        model.addAttribute("list", categoryRepository.findAll());
+        model.addAttribute("list",categoryRepository.findAll());
     }
 }

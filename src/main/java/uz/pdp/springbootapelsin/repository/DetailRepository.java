@@ -1,7 +1,9 @@
 package uz.pdp.springbootapelsin.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import uz.pdp.springbootapelsin.entity.Category;
+import uz.pdp.springbootapelsin.entity.Detail;
 
-public interface DetailRepository extends JpaRepository<DetailRepository,Integer> {
+import javax.persistence.criteria.CriteriaBuilder;
+
+public interface DetailRepository extends JpaRepository<Detail, Integer> {
 }

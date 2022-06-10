@@ -18,7 +18,7 @@
                     <tr>
                         <th>T/r</th>
                         <th>Order ID</th>
-                        <th>Product ID</th>
+                        <th>Product</th>
                         <th>Edit</th>
                         <th>Delete</th>
                     </tr>
@@ -26,8 +26,8 @@
                     <tbody>
                     <tr th:each="detail,index : ${list}">
                         <td th:text="${index.index+1}"></td>
-                        <td th:text="${detail.order}"></td>
-                        <td th:text="${detail.product}"></td>
+                        <td th:text="${detail.order.id}"></td>
+                        <td th:text="${detail.product.name}"></td>
                         <td><a th:href="@{/detail/edit/{id}(id=${detail.id})}" class="btn btn-warning"><i
                                 class="fas fa-edit ml-2"></i></a></td>
                         <td><a th:href="@{/detail/delete/{id}(id=${detail.id})}" class="btn btn-danger"><i

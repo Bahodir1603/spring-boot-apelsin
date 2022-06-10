@@ -7,43 +7,30 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import uz.pdp.springbootapelsin.entity.Category;
-import uz.pdp.springbootapelsin.service.CategoryService;
+import uz.pdp.springbootapelsin.entity.Detail;
+import uz.pdp.springbootapelsin.service.DetailService;
 
 @Controller
-@RequestMapping("/category")
-public class CategoryController {
+@RequestMapping("/detail")
+public class DetailController {
 
     @Autowired
-    CategoryService categoryService;
+    DetailService detailService;
 
     @GetMapping
-    public String getAll(Model model) {
-        categoryService.getAll(model);
-        return "category/list";
+    public String getAll(Model model){
+        detailService.getAll(model);
+        return "detail/list";
     }
 
     @GetMapping("/add")
-    public String getAddPage() {
-        return "category/add";
+    public String getAddPage(){
+        return "detail/add";
     }
 
     @PostMapping("/add")
-    public String getSavePage(@ModelAttribute Category category, Model model){
-        categoryService.add(model,category);
-        return "category/list";
+    public String getSavePage(@ModelAttribute Detail detail,Model model){
+        detailService.add(model,detail);
+        return "detail/list";
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
 }

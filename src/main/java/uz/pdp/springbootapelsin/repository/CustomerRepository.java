@@ -2,7 +2,7 @@ package uz.pdp.springbootapelsin.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import uz.pdp.springbootapelsin.entity.Category;
-import uz.pdp.springbootapelsin.entity.Product;
+import uz.pdp.springbootapelsin.entity.Customer;
 
-public interface ProductRepository extends JpaRepository<Product,Integer> {
+public interface CustomerRepository extends JpaRepository<Customer,Integer> {
 }

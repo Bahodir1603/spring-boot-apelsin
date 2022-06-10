@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.CreatedDate;
 
 import javax.persistence.*;
 import java.sql.Date;
@@ -20,6 +21,7 @@ public class Order {
     private Integer id;
 
     @Column(nullable = false)
+    @CreatedDate
     private Date date;
 
     @ManyToOne

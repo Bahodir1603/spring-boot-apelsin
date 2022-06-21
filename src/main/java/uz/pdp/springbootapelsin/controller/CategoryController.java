@@ -30,8 +30,8 @@ public class CategoryController {
 
     @PostMapping("/add")
     public String getSavePage(@ModelAttribute Category category, Model model){
-     categoryService.add(model,category);
-     return "category/list";
+        categoryService.add(model,category);
+        return "category/list";
     }
 
 

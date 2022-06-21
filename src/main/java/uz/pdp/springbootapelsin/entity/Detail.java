@@ -25,4 +25,7 @@ public class Detail {
     @ManyToOne
     @JoinColumn(name = "pr_id")
     private Product product;
+
+    @Column(nullable = false)
+    private Short quantity;
 }
